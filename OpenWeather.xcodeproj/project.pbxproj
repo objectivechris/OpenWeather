@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4E1B3F9A1F55F25300EE53CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B3F991F55F25300EE53CB /* AppDelegate.swift */; };
-		4E1B3F9C1F55F25300EE53CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B3F9B1F55F25300EE53CB /* ViewController.swift */; };
 		4E1B3F9F1F55F25300EE53CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1B3F9D1F55F25300EE53CB /* Main.storyboard */; };
 		4E1B3FA11F55F25300EE53CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E1B3FA01F55F25300EE53CB /* Assets.xcassets */; };
 		4E1B3FA41F55F25300EE53CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1B3FA21F55F25300EE53CB /* LaunchScreen.storyboard */; };
 		4E1B3FAF1F55F25300EE53CB /* OpenWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B3FAE1F55F25300EE53CB /* OpenWeatherTests.swift */; };
 		4E1B3FBA1F55F25300EE53CB /* OpenWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B3FB91F55F25300EE53CB /* OpenWeatherUITests.swift */; };
+		4E6922E01F56075300424FD8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922DF1F56075300424FD8 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		4E1B3F961F55F25300EE53CB /* OpenWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1B3F991F55F25300EE53CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E1B3F9B1F55F25300EE53CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E1B3F9E1F55F25300EE53CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E1B3FA01F55F25300EE53CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E1B3FA31F55F25300EE53CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		4E1B3FB51F55F25300EE53CB /* OpenWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1B3FB91F55F25300EE53CB /* OpenWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherUITests.swift; sourceTree = "<group>"; };
 		4E1B3FBB1F55F25300EE53CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E6922DF1F56075300424FD8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				4E1B3F991F55F25300EE53CB /* AppDelegate.swift */,
-				4E1B3F9B1F55F25300EE53CB /* ViewController.swift */,
+				4E6922DF1F56075300424FD8 /* MainViewController.swift */,
 				4E1B3F9D1F55F25300EE53CB /* Main.storyboard */,
 				4E1B3FA01F55F25300EE53CB /* Assets.xcassets */,
 				4E1B3FA21F55F25300EE53CB /* LaunchScreen.storyboard */,
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E1B3F9C1F55F25300EE53CB /* ViewController.swift in Sources */,
+				4E6922E01F56075300424FD8 /* MainViewController.swift in Sources */,
 				4E1B3F9A1F55F25300EE53CB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +516,7 @@
 				4E1B3FC01F55F25300EE53CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E1B3FC11F55F25300EE53CB /* Build configuration list for PBXNativeTarget "OpenWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +525,7 @@
 				4E1B3FC31F55F25300EE53CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E1B3FC41F55F25300EE53CB /* Build configuration list for PBXNativeTarget "OpenWeatherUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +534,7 @@
 				4E1B3FC61F55F25300EE53CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
