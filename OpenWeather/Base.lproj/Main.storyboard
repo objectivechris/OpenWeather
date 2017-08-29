@@ -45,6 +45,9 @@
                             <constraint firstItem="hfM-f7-jWR" firstAttribute="centerX" secondItem="wFa-wa-1mg" secondAttribute="centerX" id="gAk-6t-MGy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="oFY-Xx-Iop" id="Ljx-Mp-te0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSb-7p-fBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

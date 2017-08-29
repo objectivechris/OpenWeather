@@ -17,6 +17,10 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let url = Bundle.main.url(forResource: "index", withExtension: "html") {
+            let request = URLRequest(url: url)
+            webView.loadRequest(request)
+        }
     }
     
     @IBAction func dismiss(_ sender: Any) {

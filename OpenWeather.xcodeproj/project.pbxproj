@@ -17,6 +17,7 @@
 		4E6922E31F560C6C00424FD8 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922E21F560C6C00424FD8 /* WeatherCell.swift */; };
 		4E6922E61F56120500424FD8 /* PinLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922E51F56120500424FD8 /* PinLocationViewController.swift */; };
 		4E6922E81F56170B00424FD8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922E71F56170B00424FD8 /* InfoViewController.swift */; };
+		4E6922EA1F56205B00424FD8 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 4E6922E91F56205B00424FD8 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4E6922E21F560C6C00424FD8 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		4E6922E51F56120500424FD8 /* PinLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinLocationViewController.swift; sourceTree = "<group>"; };
 		4E6922E71F56170B00424FD8 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4E6922E91F56205B00424FD8 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				4E1B3FA01F55F25300EE53CB /* Assets.xcassets */,
 				4E1B3FA21F55F25300EE53CB /* LaunchScreen.storyboard */,
 				4E1B3FA51F55F25300EE53CB /* Info.plist */,
+				4E6922E91F56205B00424FD8 /* index.html */,
 			);
 			path = OpenWeather;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1B3FA41F55F25300EE53CB /* LaunchScreen.storyboard in Resources */,
+				4E6922EA1F56205B00424FD8 /* index.html in Resources */,
 				4E1B3FA11F55F25300EE53CB /* Assets.xcassets in Resources */,
 				4E1B3F9F1F55F25300EE53CB /* Main.storyboard in Resources */,
 			);
