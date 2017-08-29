@@ -18,6 +18,7 @@
 		4E6922E61F56120500424FD8 /* PinLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922E51F56120500424FD8 /* PinLocationViewController.swift */; };
 		4E6922E81F56170B00424FD8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922E71F56170B00424FD8 /* InfoViewController.swift */; };
 		4E6922EA1F56205B00424FD8 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 4E6922E91F56205B00424FD8 /* index.html */; };
+		4E6922EC1F56244800424FD8 /* SelectedCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922EB1F56244800424FD8 /* SelectedCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4E6922E51F56120500424FD8 /* PinLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinLocationViewController.swift; sourceTree = "<group>"; };
 		4E6922E71F56170B00424FD8 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4E6922E91F56205B00424FD8 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		4E6922EB1F56244800424FD8 /* SelectedCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				4E6922DF1F56075300424FD8 /* MainViewController.swift */,
 				4E6922E51F56120500424FD8 /* PinLocationViewController.swift */,
 				4E6922E71F56170B00424FD8 /* InfoViewController.swift */,
+				4E6922EB1F56244800424FD8 /* SelectedCityViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			files = (
 				4E6922E01F56075300424FD8 /* MainViewController.swift in Sources */,
 				4E6922E61F56120500424FD8 /* PinLocationViewController.swift in Sources */,
+				4E6922EC1F56244800424FD8 /* SelectedCityViewController.swift in Sources */,
 				4E1B3F9A1F55F25300EE53CB /* AppDelegate.swift in Sources */,
 				4E6922E31F560C6C00424FD8 /* WeatherCell.swift in Sources */,
 				4E6922E81F56170B00424FD8 /* InfoViewController.swift in Sources */,
