@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var currentCityLabel: UILabel!
     @IBOutlet weak var currentTimeLabel: UILabel!
@@ -16,12 +17,33 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var currentDescriptionLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    let dateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "EEEE h:mm a"
+        return df
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let date = Date()
+        let currentDate = dateFormatter.string(from: date)
+        currentTimeLabel.text = currentDate
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+
+}
+
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -38,8 +60,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
-
 }

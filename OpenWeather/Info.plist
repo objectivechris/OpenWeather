@@ -47,5 +47,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>OpenWeather uses your location to show you current weather information.</string>
 </dict>
 </plist>

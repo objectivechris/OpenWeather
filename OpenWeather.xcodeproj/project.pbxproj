@@ -15,6 +15,8 @@
 		4E1B3FBA1F55F25300EE53CB /* OpenWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B3FB91F55F25300EE53CB /* OpenWeatherUITests.swift */; };
 		4E6922E01F56075300424FD8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922DF1F56075300424FD8 /* MainViewController.swift */; };
 		4E6922E31F560C6C00424FD8 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922E21F560C6C00424FD8 /* WeatherCell.swift */; };
+		4E6922E61F56120500424FD8 /* PinLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922E51F56120500424FD8 /* PinLocationViewController.swift */; };
+		4E6922E81F56170B00424FD8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6922E71F56170B00424FD8 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		4E1B3FBB1F55F25300EE53CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E6922DF1F56075300424FD8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4E6922E21F560C6C00424FD8 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		4E6922E51F56120500424FD8 /* PinLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinLocationViewController.swift; sourceTree = "<group>"; };
+		4E6922E71F56170B00424FD8 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				4E6922DF1F56075300424FD8 /* MainViewController.swift */,
+				4E6922E51F56120500424FD8 /* PinLocationViewController.swift */,
+				4E6922E71F56170B00424FD8 /* InfoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -282,8 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E6922E01F56075300424FD8 /* MainViewController.swift in Sources */,
+				4E6922E61F56120500424FD8 /* PinLocationViewController.swift in Sources */,
 				4E1B3F9A1F55F25300EE53CB /* AppDelegate.swift in Sources */,
 				4E6922E31F560C6C00424FD8 /* WeatherCell.swift in Sources */,
+				4E6922E81F56170B00424FD8 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
