@@ -16,15 +16,24 @@ class SelectedCityViewController: UIViewController {
     @IBOutlet weak var rainLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
     
+    var selectedLocation: SelectedLocation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let viewModel = SelectedLocationViewModel(model: selectedLocation!)
+        displayWeather(using: viewModel)
     }
     
     @IBAction func dismiss(_ sender: Any) {
-        
         dismiss(animated: true, completion: nil)
     }
-
+    
+    func displayWeather(using viewModel: SelectedLocationViewModel) {
+        cityLabel.text = viewModel.city
+        temperatureLabel.text = viewModel.temperature
+        humidityLabel.text = viewModel.humidity
+        rainLabel.text = viewModel.rain
+        windLabel.text = viewModel.wind
+    }
 }
