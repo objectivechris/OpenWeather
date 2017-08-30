@@ -65,14 +65,14 @@ class LocationPersistence {
     init() {
         if let archivedItems = NSKeyedUnarchiver.unarchiveObject(withFile: weatherArchiveURL.path) as? [SelectedLocation] {
             bookmarks += archivedItems
-            if bookmarks.count > 0 {
-                print("I'm full")
-            }
         }
     }
     
     func saveChanges() -> Bool {
-        print("Saved bookmarks")
         return NSKeyedArchiver.archiveRootObject(bookmarks, toFile: weatherArchiveURL.path)
+    }
+    
+    func removeBookmark(at index: IndexPath) {
+        bookmarks.remove(at: index.row)
     }
 }

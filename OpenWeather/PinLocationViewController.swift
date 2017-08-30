@@ -79,9 +79,6 @@ class PinLocationViewController: UIViewController {
                     let okay = UIAlertAction(title: "Yes", style: .default, handler: { (action) in
                         self.persistence.bookmarks.append(selectedLocation)
                         self.delegate?.didSelectLocation(selectedLocation)
-                        
-                        // It's being added for sure
-                        print(self.persistence.bookmarks.count)
                         self.mapView.addAnnotation(annotation)
                         
                         let later = DispatchTime.now() + 1

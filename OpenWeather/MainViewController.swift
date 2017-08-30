@@ -80,7 +80,7 @@ class MainViewController: UIViewController {
     
     @IBAction func addLocation(_ sender: UIButton) {
         
-        if authStatus == .denied || authStatus == .restricted {
+        if authStatus == .denied || authStatus == .restricted || authStatus == .notDetermined {
             showErrorMessage()
         } else {
           performSegue(withIdentifier: "pinLocation", sender: self)
@@ -136,6 +136,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             tableView.beginUpdates()
             
             selectedLocations.remove(at: indexPath.row)
+            persistence.removeBookmark(at: indexPath)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             tableView.endUpdates()
@@ -171,6 +172,7 @@ extension MainViewController: CLLocationManagerDelegate {
                 
             case .error(_):
                 self.showErrorMessage()
+                manager.stopUpdatingLocation()
             }
         }
     }
@@ -180,7 +182,6 @@ extension MainViewController: PinLocationViewControllerDelegate {
     func didSelectLocation(_ location: SelectedLocation) {
         selectedLocations.append(location)
         tableView.reloadData()
-        print("MainVC got it now: \(persistence.bookmarks.count)")
         _ = persistence.saveChanges()
     }
 }
