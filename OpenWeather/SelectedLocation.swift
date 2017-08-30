@@ -74,5 +74,6 @@ class LocationPersistence {
     
     func removeBookmark(at index: IndexPath) {
         bookmarks.remove(at: index.row)
+        _ = saveChanges()
     }
 }
