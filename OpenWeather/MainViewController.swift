@@ -36,7 +36,6 @@ class MainViewController: UIViewController {
         
         super.viewDidLoad()
         getUserLocation()
-//        persistence.loadBookmarks()
         selectedLocations = persistence.bookmarks
         
     }
