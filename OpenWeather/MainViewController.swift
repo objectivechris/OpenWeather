@@ -30,11 +30,15 @@ class MainViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     let authStatus = CLLocationManager.authorizationStatus()
+    let persistence = LocationPersistence.shared
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         getUserLocation()
+//        persistence.loadBookmarks()
+        selectedLocations = persistence.bookmarks
+        
     }
     
     func startLocationManager() {
@@ -76,7 +80,7 @@ class MainViewController: UIViewController {
     
     @IBAction func addLocation(_ sender: UIButton) {
         
-        if authStatus == .denied || authStatus == .notDetermined || authStatus == .restricted {
+        if authStatus == .denied || authStatus == .restricted {
             showErrorMessage()
         } else {
           performSegue(withIdentifier: "pinLocation", sender: self)
@@ -176,5 +180,7 @@ extension MainViewController: PinLocationViewControllerDelegate {
     func didSelectLocation(_ location: SelectedLocation) {
         selectedLocations.append(location)
         tableView.reloadData()
+        print("MainVC got it now: \(persistence.bookmarks.count)")
+        _ = persistence.saveChanges()
     }
 }

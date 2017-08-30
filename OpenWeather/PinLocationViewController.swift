@@ -22,6 +22,7 @@ class PinLocationViewController: UIViewController {
     weak var delegate: PinLocationViewControllerDelegate?
     
     var currentLocation = CLLocation(latitude: 0, longitude: 0)
+    let persistence = LocationPersistence.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +67,7 @@ class PinLocationViewController: UIViewController {
                     let wind = (dict["wind"] as? JSONDictionary)?["speed"] as! Double
                     
                     // Create location object from parsed JSON data
-                    let selectionLocation = SelectedLocation(city: city, temperature: temperature, humidity: humidity, rain: rain, wind: wind, latitude: latitude, longitude: longitude)
+                    let selectedLocation = SelectedLocation(city: city, temperature: temperature, humidity: humidity, rain: rain, wind: wind, latitude: latitude, longitude: longitude)
                     
                     // Create and drop pin where user touched
                     let annotation = MKPointAnnotation()
@@ -76,7 +77,11 @@ class PinLocationViewController: UIViewController {
                     let alert = UIAlertController(title: "Add Location", message: "Do you want to add this location as a bookmark?", preferredStyle: .alert)
                     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                     let okay = UIAlertAction(title: "Yes", style: .default, handler: { (action) in
-                        self.delegate?.didSelectLocation(selectionLocation)
+                        self.persistence.bookmarks.append(selectedLocation)
+                        self.delegate?.didSelectLocation(selectedLocation)
+                        
+                        // It's being added for sure
+                        print(self.persistence.bookmarks.count)
                         self.mapView.addAnnotation(annotation)
                         
                         let later = DispatchTime.now() + 1
