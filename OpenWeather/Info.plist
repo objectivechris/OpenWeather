@@ -49,5 +49,10 @@
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>OpenWeather uses your location to show you current weather information.</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>
