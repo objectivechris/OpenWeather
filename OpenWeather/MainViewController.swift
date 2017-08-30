@@ -80,7 +80,7 @@ class MainViewController: UIViewController {
     
     @IBAction func addLocation(_ sender: UIButton) {
         
-        if authStatus == .denied || authStatus == .restricted || authStatus == .notDetermined {
+        if authStatus == .denied || authStatus == .restricted {
             showErrorMessage()
         } else {
           performSegue(withIdentifier: "pinLocation", sender: self)
