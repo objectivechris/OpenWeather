@@ -34,7 +34,7 @@ struct SelectedLocationViewModel {
         let roundedRain = "\(Int(model.rain ?? 0))%"
         self.rain = roundedRain
         
-        let roundedWind = "\(Int(model.wind)) m/s"
+        let roundedWind = "\(Int(model.wind * 2.23694))MPH"
         self.wind = roundedWind
     }
 }
