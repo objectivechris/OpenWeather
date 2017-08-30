@@ -13,4 +13,8 @@ class WeatherCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
+    func displayWeather(using viewModel: SelectedLocationViewModel) {
+        cityLabel.text = viewModel.city
+        temperatureLabel.text = viewModel.temperature
+    }
 }
