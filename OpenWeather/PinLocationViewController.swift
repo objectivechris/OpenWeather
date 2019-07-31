@@ -28,7 +28,7 @@ class PinLocationViewController: UIViewController {
         super.viewDidLoad()
         
         // Show user location in sepcified region
-        let region = MKCoordinateRegionMakeWithDistance(currentLocation.coordinate, CLLocationDistance(500), CLLocationDistance(500))
+        let region = MKCoordinateRegion(center: currentLocation.coordinate, latitudinalMeters: CLLocationDistance(500), longitudinalMeters: CLLocationDistance(500))
         mapView.showsUserLocation = true
         mapView.setRegion(region, animated: true)
         
@@ -40,7 +40,7 @@ class PinLocationViewController: UIViewController {
         buttonBackground.addDropShadow()
     }
     
-    func selectLocation(gesture: UILongPressGestureRecognizer) {
+    @objc func selectLocation(gesture: UILongPressGestureRecognizer) {
         
         if gesture.state == .began {
             
